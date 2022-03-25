@@ -51,10 +51,22 @@ def array_diff(a, b):
 
 
 # ----------------------------------------------------------------------
+
 # Create a function that takes a list of non-negative integers and strings and returns a list 
 # with the strings filtered out.
 
 def filter_list(l):
     return list(filter(lambda x: type(x) != str, l))
-
 # print(filter_list([1,2,'a','b']))
+
+
+# ----------------------------------------------------------------------
+
+# In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one 
+# side of the DNA(string)you need to return the other complementary side. DNA strand is never empty or there is
+# no DNA at all.
+
+def DNA_strand(dna):
+    return dna.translate(dna.maketrans("ATGC", "TACG"))
+
+# DNA_strand("AAAA")

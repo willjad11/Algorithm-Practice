@@ -56,7 +56,7 @@ function validatePIN(pin) {
     }
     return true;
 }
-// console.log(validatePIN("1234"))
+// console.log(validatePIN("1234"));
 
 //--------------------------------------------------------------------------------------------
 
@@ -79,4 +79,19 @@ function findNb(m) {
     }
     return blocks;
 }
-findNb(24723578342962)
+// console.log(findNb(24723578342962));
+
+//--------------------------------------------------------------------------------------------
+
+// Your task is to sort a given string. Each word in the string will contain a single number. This 
+// number is the position the word should have in the result. Note: Numbers can be from 1 to 9. 
+// So 1 will be the first word(not 0).
+
+function order(words) {
+    let sortedArray = [];
+    while (sortedArray.length != words.split(" ").length) {
+        sortedArray.push(words.split(" ").find(x => x.includes(sortedArray.length + 1)));
+    }
+    return sortedArray.join(" ");
+}
+// console.log(order("is2 Thi1s T4est 3a"));
