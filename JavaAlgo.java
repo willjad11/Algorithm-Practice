@@ -1,4 +1,7 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 
 public class JavaAlgo {
 
@@ -39,6 +42,30 @@ public class JavaAlgo {
         }
         // Vowels vowels = new Vowels();
         // vowels.getCount("aeiou");
+
+        // -------------------------------------------------------------------------------------------
+
+        // create a fibonacci function that given a signature array/list, returns the first n elements 
+        // signature included of the so seeded sequence
+        // it works basically like a Fibonacci, but summing the last 3 (instead of 2) numbers of the 
+        // sequence to generate the next
+
+        class Xbonacci {
+            public double[] tribonacci(double[] s, int n) {
+                double[] output = new double[n];
+                for (int i = 0; i < n; i++) {
+                    if (i < 3) {
+                        output[i] = s[i];
+                    }
+                    else {
+                        output[i] = output[i - 1] + output[i - 2] + output[i - 3];
+                    }
+                }
+                return output;
+            }
+        }
+        // Xbonacci xbonacci = new Xbonacci();
+        // xbonacci.tribonacci(new double []{1,1,1},10);
     }
 }
 

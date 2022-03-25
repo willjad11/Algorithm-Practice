@@ -32,3 +32,16 @@ def dig_pow(n, p):
     else:
         return sum / n
 # print(dig_pow(89, 1))
+
+# ----------------------------------------------------------------------
+
+# Your goal is to implement a difference function, which subtracts one list from another and returns the result.
+# It should remove all values from list a, which are present in list b keeping their order.
+# If a value is present in b, all of its occurrences must be removed from the other
+
+def array_diff(a, b):
+    for number in b:
+        while number in a:
+            a.remove(number)
+    return a
+# print(array_diff([1,2], [1]))
