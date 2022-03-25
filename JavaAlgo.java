@@ -66,6 +66,19 @@ public class JavaAlgo {
         }
         // Xbonacci xbonacci = new Xbonacci();
         // xbonacci.tribonacci(new double []{1,1,1},10);
+
+        // -------------------------------------------------------------------------------------------
+
+        // Implement a function that accepts 3 integer values a, b, c. The function should return true 
+        // if a triangle can be built with the sides of given length and false in any other case.
+
+        class TriangleTester {
+            public boolean isTriangle(int a, int b, int c) {
+                return (a < b + c && b < a + c && c < a + b);
+            }
+        }
+        // TriangleTester triangleTester = new TriangleTester();
+        // System.out.println(triangleTester.isTriangle(1, 2, 2));
     }
 }
 
