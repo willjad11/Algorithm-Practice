@@ -101,3 +101,18 @@ def solution(s):
         output.append(s[i] + s[i + 1])
     return output
 # print(solution("asdfads"))
+
+# ----------------------------------------------------------------------
+
+# Complete the solution so that the function will break up camel casing, 
+# using a space between words.
+
+def solution(s):
+    output = ""
+    for i in range(len(s)):
+        if s[i].isupper():
+            output += s[len(output) - output.count(" "):i] + " "
+        if i == len(s) - 1:
+            output += s[len(output) - output.count(" "):i + 1]
+    return output
+# print(solution("helloWorld"))

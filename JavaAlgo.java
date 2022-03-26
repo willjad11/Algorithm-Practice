@@ -3,6 +3,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class JavaAlgo {
 
@@ -153,6 +154,46 @@ public class JavaAlgo {
         }
         // WhoLikesIt whoLikesIt = new WhoLikesIt();
         // System.out.println(whoLikesIt.whoLikesIt("Alex", "Jacob", "Mark", "Max"));
+
+        // -------------------------------------------------------------------------------------------
+
+        // Write a function that accepts an array of one-letter strings representing
+        // directions to walk (eg. ['n', 's', 'w', 'e']). You always walk only a single
+        // block for each letter (direction) and you know it takes you one minute to
+        // traverse one city block, so create a function that will return true if the
+        // walk the app gives you will take you exactly ten minutes (you don't want to
+        // be early or late!) and will, of course, return you to your starting point.
+        // Return false otherwise.
+
+        class TenMinWalk {
+            public boolean isValid(char[] walk) {
+                int xAxis = 0;
+                int yAxis = 0;
+                if (walk.length != 10) {
+                    return false;
+                }
+                for (int i = 0; i < walk.length; i++) {
+                    if (walk[i] == 'n') {
+                        yAxis++;
+                    }
+                    if (walk[i] == 's') {
+                        yAxis--;
+                    }
+                    if (walk[i] == 'w') {
+                        xAxis++;
+                    }
+                    if (walk[i] == 'e') {
+                        xAxis--;
+                    }
+                }
+                if (xAxis == 0 && yAxis == 0) {
+                    return true;
+                }
+                return false;
+            }
+        }
+        // TenMinWalk tenMinWalk = new TenMinWalk();
+        // System.out.println(tenMinWalk.isValid(new char[] {'n','n','n','w','w','e','n','s','n','s'}));
     }
 }
 
