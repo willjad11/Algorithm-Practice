@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.stream.IntStream;
 
 public class JavaAlgo {
 
@@ -79,6 +80,27 @@ public class JavaAlgo {
         }
         // TriangleTester triangleTester = new TriangleTester();
         // System.out.println(triangleTester.isTriangle(1, 2, 2));
+
+        // -------------------------------------------------------------------------------------------
+
+        // Your job is to take that array and find an index N where the sum of the integers to the left of 
+        // N is equal to the sum of the integers to the right of N. If there is no index that would make 
+        // this happen, return -1.
+
+        class EvenIndex {
+            public int findEvenIndex(int[] arr) {
+                for (int i = 0; i < arr.length; i++) {
+                    int arrayLeft = IntStream.of(Arrays.copyOfRange(arr, 0, i)).sum();
+                    int arrayRight = IntStream.of(Arrays.copyOfRange(arr, i + 1, arr.length)).sum();
+                    if (arrayLeft == arrayRight) {
+                        return i;
+                    }
+                }
+                return -1;
+            }
+        }
+        // EvenIndex evenIndex = new EvenIndex();
+        // System.out.println(evenIndex.findEvenIndex(new int[] { 1, 100, 50, -51, 1, 1}));
     }
 }
 
