@@ -70,3 +70,24 @@ def DNA_strand(dna):
     return dna.translate(dna.maketrans("ATGC", "TACG"))
 
 # DNA_strand("AAAA")
+
+# ----------------------------------------------------------------------
+
+
+# Create a function that returns the sum of the two lowest positive numbers 
+# given an array of minimum 4 positive integers. No floats or non-positive 
+# integers will be passed.
+
+def sum_two_smallest_numbers(numbers):
+    small1 = numbers[0]
+    small2 = numbers[1]
+    for i in range(2, len(numbers)):
+        if numbers[i] < small1:
+            if small1 < small2:
+                small2 = small1
+            small1 = numbers[i]
+        elif numbers[i] < small2:
+            small2 = numbers[i]
+    return small1 + small2
+# print(sum_two_smallest_numbers([7, 15, 12, 18, 22]))
+

@@ -101,6 +101,29 @@ public class JavaAlgo {
         }
         // EvenIndex evenIndex = new EvenIndex();
         // System.out.println(evenIndex.findEvenIndex(new int[] { 1, 100, 50, -51, 1, 1}));
+
+        // -------------------------------------------------------------------------------------------
+
+        // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. 
+        // The sum of these multiples is 23. Create a function that returns the sum of all the 
+        // multiples of 3 or 5 below the number passed in. Additionally, if the number is negative, return 0.
+
+        class Solution {
+            public int solution(int number) {
+                int sum = 0;
+                for (int i = number - 1; i >= 0; i--) {
+                    if (i % 3 == 0 && i % 5 == 0) {
+                        sum += i;
+                    }
+                    else if (i % 3 == 0 || i % 5 == 0) {
+                        sum += i;
+                    }
+                }
+                return sum;
+            }
+        }
+        // Solution solution = new Solution();
+        // System.out.println(solution.solution(10));
     }
 }
 

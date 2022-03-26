@@ -95,3 +95,35 @@ function order(words) {
     return sortedArray.join(" ");
 }
 // console.log(order("is2 Thi1s T4est 3a"));
+
+//--------------------------------------------------------------------------------------------
+
+// Complete the findNextSquare method that finds the next integral perfect square after the one 
+// passed as a parameter.Recall that an integral perfect square is an integer n such that sqrt(n) 
+// is also an integer. If the parameter is itself not a perfect square then - 1 should be returned.
+// You may assume the parameter is non - negative.
+
+function findNextSquare(sq) {
+    if (Number.isInteger(Math.sqrt(sq))) {
+        return ((Math.sqrt(sq) + 1) ** 2)
+    }
+    return -1;
+}
+// console.log(findNextSquare(144))
+
+//--------------------------------------------------------------------------------------------
+
+// Take 2 strings s1 and s2 including only letters from ato z.Return a new sorted string, the longest 
+// possible, containing distinct letters - each taken only once - coming from s1 or s2.
+
+function longest(s1, s2) {
+    let letterBank = "abcdefghijklmnopqrstuvwxyz";
+    let output = "";
+    for (let i = 0; i < letterBank.length; i++) {
+        if (s1.includes(letterBank[i]) || s2.includes(letterBank[i])) {
+            output += letterBank[i];
+        }
+    }
+    return output;
+}
+// console.log(longest("loopingisfunbutdangerous", "lessdangerousthancoding"))
