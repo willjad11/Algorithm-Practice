@@ -87,3 +87,17 @@ def sum_two_smallest_numbers(numbers):
     return small1 + small2
 # print(sum_two_smallest_numbers([7, 15, 12, 18, 22]))
 
+# ----------------------------------------------------------------------
+
+# Create a function that splits the string into pairs of two characters. 
+# If the string contains an odd number of characters then it should replace the 
+# missing second character of the final pair with an underscore('_').
+
+def solution(s):
+    output = []
+    if len(s) % 2 != 0:
+        s += "_"
+    for i in range(0, len(s), 2):
+        output.append(s[i] + s[i + 1])
+    return output
+# print(solution("asdfadsf"))
