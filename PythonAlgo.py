@@ -5,7 +5,6 @@
 
 import math
 
-
 def descending_order(num):
     newArray = [str(x) for x in str(num)]
     for i in range(len(newArray)):
@@ -49,7 +48,6 @@ def array_diff(a, b):
     return a
 # print(array_diff([1,2], [1]))
 
-
 # ----------------------------------------------------------------------
 
 # Create a function that takes a list of non-negative integers and strings and returns a list 
@@ -58,7 +56,6 @@ def array_diff(a, b):
 def filter_list(l):
     return list(filter(lambda x: type(x) != str, l))
 # print(filter_list([1,2,'a','b']))
-
 
 # ----------------------------------------------------------------------
 
