@@ -142,3 +142,17 @@ def alphabet_position(text):
             output.append(letterBank.index(text[i].lower()) + 1)
     return ' '.join([str(elem) for elem in output])
 # print(alphabet_position("The sunset sets at twelve o' clock."))
+
+# ----------------------------------------------------------------------
+
+# Define a function that takes one integer argument and returns logical 
+# value true or false depending on if the integer is a prime.
+
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num/2)+1):
+        if (num % i) == 0:
+            return False
+    return True
+# is_prime(11)

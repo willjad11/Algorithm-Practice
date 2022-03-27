@@ -189,3 +189,19 @@ function uniqueInOrder(iterable) {
     return output;
 }
 // console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+
+//--------------------------------------------------------------------------------------------
+
+// Write a function that when given a URL as a string, parses out just the domain name and 
+// returns it as a string.
+
+function domainName(url) {
+    const urlPrefix = ["http://", "https://", "http://www.", "https://www.", "www."]
+    urlPrefix.forEach(e => url.startsWith(e) && (url = url.substring(e.length, url.length)))
+    for (let i = 0; i < url.length; i++) {
+        if (url[i] == ".") {
+            return url.substring(0, i)
+        }
+    }
+}
+// console.log(domainName("https://youtube.com"))

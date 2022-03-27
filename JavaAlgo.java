@@ -222,6 +222,36 @@ public class JavaAlgo {
         }
         // Tower tower = new Tower();
         // Arrays.asList(tower.TowerBuilder(10)).forEach(e -> System.out.println(e));
+
+        // -------------------------------------------------------------------------------------------
+
+        // The goal of this exercise is to convert a string to a new string where each character in the 
+        // new string is "(" if that character appears only once in the original string, or ")" if that 
+        // character appears more than once in the original string. Ignore capitalization when determining 
+        // if a character is a duplicate.
+
+        class DuplicateEncoder {
+            String encode(String word) {
+                String output = "";
+                for (int i = 0; i < word.length(); i++) {
+                    String escape = "";
+                    if (!Character.isLetter(word.charAt(i)) && !Character.isDigit(word.charAt(i))) {
+                        escape = "\\";
+                    }
+                    if (word.toLowerCase().split(escape + Character.toString(word.charAt(i)).toLowerCase(), -1).length - 1 > 1) {
+                        output += ")";
+                        escape = "";
+                    }
+                    else {
+                        output += "(";
+                        escape = "";
+                    }
+                }
+                return output;
+            }
+        }
+        // DuplicateEncoder duplicateEncoder = new DuplicateEncoder();
+        // System.out.println(duplicateEncoder.encode("Prespecialized"));
     }
 }
 
