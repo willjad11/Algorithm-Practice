@@ -252,6 +252,22 @@ public class JavaAlgo {
         }
         // DuplicateEncoder duplicateEncoder = new DuplicateEncoder();
         // System.out.println(duplicateEncoder.encode("Prespecialized"));
+
+        class DRoot {
+            public int digital_root(int n) {
+                String strNum = "" + n;
+                int sum = 0;
+                for (int i = 0; i < strNum.length(); ++i) {
+                    sum += Integer.parseInt(Character.toString(strNum.charAt(i)));
+                }
+                if (sum > 9) {
+                    return digital_root(sum);
+                }
+                return sum;
+            }
+        }
+        // DRoot droot = new DRoot();
+        // System.out.println(droot.digital_root(923));
     }
 }
 
