@@ -127,3 +127,20 @@ def solution(s):
 def narcissistic(value):
     return sum(int(x) ** len(str(value)) for x in str(value)) == value
 # print(narcissistic(371))
+
+# ----------------------------------------------------------------------
+
+# Given a string, replace every letter with its position in the alphabet.
+# If anything in the text isn't a letter, ignore it and don't return it.
+
+
+def alphabet_position(text):
+    letterBank = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+                'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    output = []
+    for i in range(len(text)):
+        if text[i].isalpha():
+            output.append(letterBank.index(text[i].lower()) + 1)
+    return ' '.join([str(elem) for elem in output])
+
+print(alphabet_position("The sunset sets at twelve o' clock."))
