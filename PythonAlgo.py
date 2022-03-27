@@ -141,5 +141,4 @@ def alphabet_position(text):
         if text[i].isalpha():
             output.append(letterBank.index(text[i].lower()) + 1)
     return ' '.join([str(elem) for elem in output])
-
-print(alphabet_position("The sunset sets at twelve o' clock."))
+# print(alphabet_position("The sunset sets at twelve o' clock."))
