@@ -194,6 +194,34 @@ public class JavaAlgo {
         }
         // TenMinWalk tenMinWalk = new TenMinWalk();
         // System.out.println(tenMinWalk.isValid(new char[] {'n','n','n','w','w','e','n','s','n','s'}));
+
+        // -------------------------------------------------------------------------------------------
+
+        // Build a pyramid-shaped tower given a positive integer number of floors. A tower block is 
+        // represented with "*" character.
+
+        class Tower {
+            public String[] TowerBuilder(int nFloors) {
+                String[] pyramid = new String[nFloors];
+                int spaces = nFloors - 1;
+                int asterisks = 1;
+                for (int i = 0; i < nFloors; i++) {
+                    String tempString = "";
+                    tempString += String.join("", Collections.nCopies(spaces, " "))
+                            + String.join("", Collections.nCopies(asterisks, "*"))
+                            + String.join("", Collections.nCopies(spaces, " "));
+                    pyramid[i] = tempString;
+                    spaces -= 1;
+                    if (spaces < 0) {
+                        spaces = 0;
+                    }
+                    asterisks += 2;
+                }
+                return pyramid;
+            }
+        }
+        Tower tower = new Tower();
+        Arrays.asList(tower.TowerBuilder(10)).forEach(e -> System.out.println(e));
     }
 }
 
