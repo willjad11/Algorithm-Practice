@@ -220,8 +220,8 @@ public class JavaAlgo {
                 return pyramid;
             }
         }
-        Tower tower = new Tower();
-        Arrays.asList(tower.TowerBuilder(10)).forEach(e -> System.out.println(e));
+        // Tower tower = new Tower();
+        // Arrays.asList(tower.TowerBuilder(10)).forEach(e -> System.out.println(e));
     }
 }
 
