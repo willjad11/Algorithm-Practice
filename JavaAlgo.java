@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.stream.IntStream;
 
 public class JavaAlgo {
-
+    
     public static void main(String[] args) {
         // You are asked to square every digit of a number and concatenate them
         // For example, if we run 9119 through the function, 811181 will come out,

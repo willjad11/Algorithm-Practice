@@ -134,8 +134,12 @@ def narcissistic(value):
 # If anything in the text isn't a letter, ignore it and don't return it.
 
 def alphabet_position(text):
-    letterBank = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
-                'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    letterBank = ['a', 'b', 'c', 'd', 
+                'e', 'f', 'g', 'h', 'i', 
+                'j', 'k', 'l', 'm', 'n', 
+                'o', 'p', 'q', 'r', 's', 
+                't', 'u', 'v', 'w', 'x', 
+                'y', 'z']
     output = []
     for i in range(len(text)):
         if text[i].isalpha():
